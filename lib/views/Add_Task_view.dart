@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:todo_app/widgets/Add_Bottom.dart';
 import '../widgets/Add_Task_Field.dart';
 
 class AddTaskView extends StatelessWidget {
@@ -25,37 +26,20 @@ class AddTaskView extends StatelessWidget {
         ),
       ),
       body: ListView(
-        children: [
+        children: const [
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: EdgeInsets.all(20.0),
             child: Column(
               children: [
-                const AddTaskField(
+                AddTaskField(
                   hintText: 'Tittle',
                 ),
-                const SizedBox(height: 20),
-                const AddTaskField(
+                SizedBox(height: 20),
+                AddTaskField(
                   hintText: 'Delail',
                 ),
-                const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF939FE4),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    minimumSize: const Size(3000, 55),
-                  ),
-                  child: const Text(
-                    'Add',
-                    style: TextStyle(
-                      fontSize: 22,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
+                SizedBox(height: 20),
+                AddBottom(),
               ],
             ),
           ),

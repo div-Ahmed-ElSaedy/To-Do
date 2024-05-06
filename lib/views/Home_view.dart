@@ -44,9 +44,8 @@ class HomeView extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) {
-                return const AddTaskView();
-              },
+              builder: (context) => const AddTaskView(),
+              fullscreenDialog: true,
             ),
           );
         },
