@@ -1,9 +1,8 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
-import '../widgers/Container_ToDo.dart';
+import '../widgets/Container_ToDo.dart';
+import 'Add_Task_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -41,7 +40,16 @@ class HomeView extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) {
+                return const AddTaskView();
+              },
+            ),
+          );
+        },
         backgroundColor: const Color(0xFF939FE4),
         child: const Icon(
           Icons.add,

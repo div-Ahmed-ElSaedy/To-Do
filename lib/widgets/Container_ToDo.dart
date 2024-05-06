@@ -38,7 +38,7 @@ class _ContainerToDoState extends State<ContainerToDo> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  textAlign: TextAlign.left,
+                  textAlign: TextAlign.start,
                   widget.title,
                   maxLines: 1,
                   style: const TextStyle(
@@ -49,7 +49,7 @@ class _ContainerToDoState extends State<ContainerToDo> {
                 ),
                 Text(
                   widget.subTitle,
-                  textAlign: TextAlign.left,
+                  textAlign: TextAlign.start,
                 ),
               ],
             ),
