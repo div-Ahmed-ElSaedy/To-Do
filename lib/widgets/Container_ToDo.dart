@@ -1,6 +1,8 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:quickalert/quickalert.dart';
+import 'package:todo_app/views/Add_Task_view.dart';
 
 class ContainerToDo extends StatefulWidget {
   const ContainerToDo({
@@ -65,7 +67,22 @@ class _ContainerToDoState extends State<ContainerToDo> {
                       ),
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        QuickAlert.show(
+                          context: context,
+                          type: QuickAlertType.warning,
+                          confirmBtnColor: Colors.red,
+                          text: 'Are you sure',
+                          confirmBtnText: 'Delete',
+                          showCancelBtn: true,
+                          cancelBtnText: 'Cansel',
+                          autoCloseDuration: const Duration(seconds: 4),
+                          onConfirmBtnTap: () {},
+                          onCancelBtnTap: () {
+                            Navigator.pop(context);
+                          },
+                        );
+                      },
                       icon: const Icon(
                         color: Color(0xFF939FE4),
                         Icons.delete_forever,
