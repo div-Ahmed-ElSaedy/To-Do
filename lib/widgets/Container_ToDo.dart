@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:quickalert/quickalert.dart';
-import 'package:todo_app/views/Add_Task_view.dart';
+import 'package:todo_app/views/edit_task_view.dart';
 
 class ContainerToDo extends StatefulWidget {
   const ContainerToDo({
@@ -60,7 +60,15 @@ class _ContainerToDoState extends State<ContainerToDo> {
                 Row(
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const EditTaskview(),
+                            fullscreenDialog: true,
+                          ),
+                        );
+                      },
                       icon: const Icon(
                         color: Color(0xFF939FE4),
                         Icons.edit_note,

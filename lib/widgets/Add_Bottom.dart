@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:quickalert/quickalert.dart';
-import 'package:todo_app/views/Home_view.dart';
 
 class AddBottom extends StatelessWidget {
   const AddBottom({
