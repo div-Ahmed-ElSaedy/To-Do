@@ -2,15 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-class AddTaskField extends StatelessWidget {
-  const AddTaskField({
-    super.key,
-    required this.hintText,
-  });
+class CustomTextField extends StatelessWidget {
+  const CustomTextField({super.key, required this.hintText, this.maxLine = 1});
   final String hintText;
+  final int maxLine;
   @override
   Widget build(BuildContext context) {
     return TextField(
+      maxLines: maxLine,
       decoration: InputDecoration(
         hintText: hintText,
         filled: true,

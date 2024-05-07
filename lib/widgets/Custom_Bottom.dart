@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:quickalert/quickalert.dart';
 
-class AddBottom extends StatelessWidget {
-  const AddBottom({
+class CustomBottom extends StatelessWidget {
+  const CustomBottom({
     super.key,
     required this.tittle,
     required this.des,

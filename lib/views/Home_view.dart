@@ -1,6 +1,6 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
-import '../widgets/Tast_List_view.dart';
+import '../widgets/Task_List_view.dart';
 import '../widgets/Add_Task_Bottom_Sheet.dart';
 
 class HomeView extends StatelessWidget {
@@ -36,6 +36,10 @@ class HomeView extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
+            backgroundColor: const Color(0xFFE2E6FF),
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(10.0)),
+            ),
             context: context,
             builder: (context) => const AddTaskBottomSheet(),
           );

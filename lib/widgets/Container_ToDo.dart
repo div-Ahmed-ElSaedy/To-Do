@@ -62,6 +62,11 @@ class _ContainerToDoState extends State<ContainerToDo> {
                     IconButton(
                       onPressed: () {
                         showModalBottomSheet(
+                          backgroundColor: const Color(0xFFE2E6FF),
+                          shape: const RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.0)),
+                          ),
                           context: context,
                           builder: (context) => const EditTaskBottomSheet(),
                         );
