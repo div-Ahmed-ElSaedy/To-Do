@@ -10,23 +10,24 @@ class EditTaskBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(20.0),
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
       child: SingleChildScrollView(
         child: Column(
           children: [
-            CustomTextField(
+            const CustomTextField(
               hintText: 'Tittle',
             ),
-            SizedBox(height: 20),
-            CustomTextField(
+            const SizedBox(height: 20),
+            const CustomTextField(
               maxLine: 5,
               hintText: 'Content',
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             CustomBottom(
+              onTap: () {},
               tittle: 'Save',
-              des: 'Saved successfully',
+              // des: 'Saved successfully',
             ),
           ],
         ),
