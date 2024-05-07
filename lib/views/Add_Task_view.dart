@@ -39,7 +39,10 @@ class AddTaskView extends StatelessWidget {
                   hintText: 'Delail',
                 ),
                 SizedBox(height: 20),
-                AddBottom(),
+                AddBottom(
+                  tittle: 'Add',
+                  des: 'The task has been added Successfully',
+                ),
               ],
             ),
           ),

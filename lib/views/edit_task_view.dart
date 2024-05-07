@@ -38,7 +38,10 @@ class EditTaskview extends StatelessWidget {
                   hintText: 'Delail',
                 ),
                 SizedBox(height: 20),
-                AddBottom(),
+                AddBottom(
+                  tittle: 'Save',
+                  des: 'Saved successfully',
+                ),
               ],
             ),
           ),

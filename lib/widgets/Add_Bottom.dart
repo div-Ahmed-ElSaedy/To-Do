@@ -6,7 +6,11 @@ import 'package:quickalert/quickalert.dart';
 class AddBottom extends StatelessWidget {
   const AddBottom({
     super.key,
+    required this.tittle,
+    required this.des,
   });
+  final String tittle;
+  final String des;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,7 @@ class AddBottom extends StatelessWidget {
           type: QuickAlertType.success,
           title: 'Success',
           confirmBtnColor: const Color(0xFF939FE4),
-          text: 'The task has been added Successfully',
+          text: des,
           onConfirmBtnTap: () {
             Navigator.pop(context);
             Navigator.pop(context);
@@ -31,9 +35,9 @@ class AddBottom extends StatelessWidget {
         ),
         minimumSize: const Size(3000, 55),
       ),
-      child: const Text(
-        'Add',
-        style: TextStyle(
+      child: Text(
+        tittle,
+        style: const TextStyle(
           fontSize: 22,
           color: Colors.white,
           fontWeight: FontWeight.bold,
