@@ -1,7 +1,7 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
 import '../widgets/Tast_List_view.dart';
-import 'Add_Task_view.dart';
+import '../widgets/Add_Task_Bottom_Sheet.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -35,12 +35,9 @@ class HomeView extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const AddTaskView(),
-              fullscreenDialog: true,
-            ),
+          showModalBottomSheet(
+            context: context,
+            builder: (context) => const AddTaskBottomSheet(),
           );
         },
         backgroundColor: const Color(0xFF939FE4),
