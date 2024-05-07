@@ -1,7 +1,6 @@
 // ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
-import '../widgets/Container_ToDo.dart';
+import '../widgets/Tast_List_view.dart';
 import 'Add_Task_view.dart';
 
 class HomeView extends StatelessWidget {
@@ -24,20 +23,15 @@ class HomeView extends StatelessWidget {
           ),
         ),
       ),
-      body: ListView(
-        children: const [
-          Padding(
-            padding: EdgeInsets.all(20.0),
-            child: Column(
-              children: [
-                ContainerToDo(
-                  title: 'ToDo Title',
-                  subTitle: 'TODo Sub Title',
-                ),
-              ],
+      body: const Padding(
+        padding: EdgeInsets.all(20.0),
+        child: Column(
+          children: [
+            Expanded(
+              child: TasksListView(),
             ),
-          )
-        ],
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
